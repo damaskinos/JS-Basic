@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bucle For</title>
+        <style type="text/css">
+        #forma
+            {
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                position:relative;
+                top:100px;
+                left:100px;
+            }
+        </style> 
+   
+    </head>
+    
+    <body>
+        <h1> Comprueba tus Reflejos! </h1>
+        <h2>Haz click en los circulos y rectangulos tan rápido como puedas!</h2>
+      <p>Tiempo de Reacción: <span id="tiempoReaccion"></span></p>
+        <div id="forma"></div>
+      
+        
+        <script>
+            var inicio = new Date().getTime(); //alcance global de la variable
+             function colorAleatorio() {
+                var letters = '0123456789ABCDEF'.split('');
+                var color = '#';
+                for (var i = 0; i < 6; i++ ) {
+                    color += letters[Math.round(Math.random() * 15)];
+                }
+                   
+                return color;
+}
+             function aparecerForma(){
+               
+                var top = Math.random()*400;
+                var left = Math.random()*400;
+                var width = Math.random()*200+100;
+                var color = colorAleatorio();
+                 
+                 document.getElementById("forma").style.display = "block";
+                 document.getElementById("forma").style.top = top;
+                 document.getElementById("forma").style.left = left;
+                 document.getElementById("forma").style.width = width;
+                 document.getElementById("forma").style.height = width;
+                 
+                 document.getElementById("forma").style.backgroundColor = color;
+                 
+                 inicio = new Date().getTime();
+                 
+                 
+                 if (Math.random()>0.5){
+                  
+                 document.getElementById("forma").style.borderRadius = "100%";    
+                     
+                 }
+                 
+                 else {
+                     
+                     
+                 document.getElementById("forma").style.borderRadius = "0%";    
+                     
+                     
+                 }
+                 
+                 
+                 
+                 
+      
+           }
+             function aparecerFormaDespuesRetraso(){
+                
+                
+                setTimeout(aparecerForma, Math.random()*2000);
+            } 
+                
+            
+            
+            
+            document.getElementById("forma").onclick = function(){
+                
+                document.getElementById("forma").style.display = "none";    
+                var fin = new Date().getTime();
+                var diferencia = (fin-inicio)/1000;
+                document.getElementById("tiempoReaccion").innerHTML = diferencia+" segundos";
+                aparecerFormaDespuesRetraso();
+                
+           }
+                      
+            
+            
+            
+        </script>
+        
+        
+    </body>
+    </html>

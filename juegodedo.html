@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>javascript</title>
+        
+   
+    </head>
+    
+    <body>
+        <h1> Acierta cuantos dedos tengo!</h1>
+        <input type="text" id="caja" placeholder="Número de Dedos">
+        <button id="miBoton">Comprueba el Resultado</button>
+        <p id="numeroResultado"></p>
+        <p id="resultado"></p>
+        
+        <script>
+    document.getElementById("miBoton").onclick = function(){
+        //Numero entre 0 y 5,9999999
+        var dedos = Math.random()*6;
+        dedos = Math.floor(dedos);
+        var respuesta = document.getElementById("caja").value;
+        document.getElementById("numeroResultado").innerHTML = "El número aleatorio es: "+dedos;
+         
+        if (respuesta == dedos) {
+            
+            
+            document.getElementById("resultado").innerHTML = "Muy bien!"
+            
+        }
+        
+        else {
+            
+            
+            document.getElementById("resultado").innerHTML = "MAAAAAAAAAL!"
+    
+        }
+        
+        
+        
+        
+        
+    }
+    
+    
+            
+        </script>
+    </body>
+    </html>

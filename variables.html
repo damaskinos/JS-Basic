@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>javascript</title>
+        
+   
+    </head>
+    
+    <body>
+       
+        <input id="caja" type="text"  placeholder="Usuario">
+        <p id="texto">Login</p>
+        <button id="login">Loguéate</button>
+        <script>
+           
+            
+            document.getElementById("login").onclick =
+                function(){
+                 var usuario = "";
+            usuario = document.getElementById("caja").value;
+                
+              document.getElementById("texto").innerHTML = "Bienvenido!! "+usuario;  
+            }
+       
+        
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>javascript</title>
+    </head>
+    <body>
+    <p id="texto">Esto es un texto</p>
+    <button id="miBoton" >Como?</button>
+    <p id="segundoParrafo">Javascript es...</p>
+    <button id="miBoton2">Cambia el Texto!</button>
+    <p id="parrafoVacio"></p>
+    <button id="botonParrafo">Añade un Parrafo!</button>
+        <script type="text/javascript">
+        
+        document.getElementById("miBoton").onclick =
+            
+            function(){
+            
+            document.getElementById("texto").innerHTML = "HOLA"
+                        
+        }
+        
+        document.getElementById("miBoton2").onclick = 
+            
+            function(){
+            
+            document.getElementById("segundoParrafo").innerHTML +="INCRIBLE!!"
+        }
+        
+        document.getElementById("botonParrafo").onclick =
+            
+            function(){
+            
+            document.getElementById("parrafoVacio").innerHTML = "Me está encantando Javascript"
+            
+        }
+        
+        
+        
+        </script>
+    </body>
